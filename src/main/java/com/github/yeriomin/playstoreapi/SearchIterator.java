@@ -66,6 +66,7 @@ public class SearchIterator extends AppListIterator {
 
     @Override
     protected boolean isRootDoc(DocV2 doc) {
-        return super.isRootDoc(doc) && doc.getDocid().contains("search");
+        ClusterInfoItem item = doc.getDataClusterInfoContainer().getDataClusterInfo().getClusterInfoItemContainer().getClusterInfoItem();
+        return super.isRootDoc(doc) && item.getClusterName().contains("search_results_cluster");
     }
 }
