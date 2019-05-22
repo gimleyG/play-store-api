@@ -595,10 +595,10 @@ public class GooglePlayAPITest {
         Assert.assertTrue(response.getDoc(0).getChild(1).getChildCount() > 1);
 
         Assert.assertEquals("Games", response.getDoc(0).getChild(1).getChild(14).getTitle());
-        Assert.assertTrue(response.getDoc(0).getChild(1).getChild(14).hasUnknownCategoryContainer());
-        Assert.assertTrue(response.getDoc(0).getChild(1).getChild(14).getUnknownCategoryContainer().hasCategoryIdContainer());
-        Assert.assertTrue(response.getDoc(0).getChild(1).getChild(14).getUnknownCategoryContainer().getCategoryIdContainer().hasCategoryId());
-        Assert.assertEquals("GAME", response.getDoc(0).getChild(1).getChild(14).getUnknownCategoryContainer().getCategoryIdContainer().getCategoryId());
+        Assert.assertTrue(response.getDoc(0).getChild(1).getChild(14).hasDataClusterInfoContainer());
+        Assert.assertTrue(response.getDoc(0).getChild(1).getChild(14).getDataClusterInfoContainer().hasCategoryIdContainer());
+        Assert.assertTrue(response.getDoc(0).getChild(1).getChild(14).getDataClusterInfoContainer().getCategoryIdContainer().hasCategoryId());
+        Assert.assertEquals("GAME", response.getDoc(0).getChild(1).getChild(14).getDataClusterInfoContainer().getCategoryIdContainer().getCategoryId());
         Assert.assertEquals(1, response.getDoc(0).getChild(1).getChild(14).getImageCount());
         Assert.assertEquals(5, response.getDoc(0).getChild(1).getChild(14).getImage(0).getImageType());
         Assert.assertEquals("https://lh3.ggpht.com/9B4h3oV3V976QI22pHX5CAZmpOjhtjxmJ85x234iVasadqm_lQjL4rebkIoHpDvv_qM09sXlH9UVyHvhmQ", response.getDoc(0).getChild(1).getChild(14).getImage(0).getImageUrl());
@@ -622,10 +622,10 @@ public class GooglePlayAPITest {
         Assert.assertTrue(response.getDoc(0).getChild(0).getChildCount() > 1);
 
         Assert.assertEquals("Action", response.getDoc(0).getChild(0).getChild(0).getTitle());
-        Assert.assertTrue(response.getDoc(0).getChild(0).getChild(0).hasUnknownCategoryContainer());
-        Assert.assertTrue(response.getDoc(0).getChild(0).getChild(0).getUnknownCategoryContainer().hasCategoryIdContainer());
-        Assert.assertTrue(response.getDoc(0).getChild(0).getChild(0).getUnknownCategoryContainer().getCategoryIdContainer().hasCategoryId());
-        Assert.assertEquals("GAME_ACTION", response.getDoc(0).getChild(0).getChild(0).getUnknownCategoryContainer().getCategoryIdContainer().getCategoryId());
+        Assert.assertTrue(response.getDoc(0).getChild(0).getChild(0).hasDataClusterInfoContainer());
+        Assert.assertTrue(response.getDoc(0).getChild(0).getChild(0).getDataClusterInfoContainer().hasCategoryIdContainer());
+        Assert.assertTrue(response.getDoc(0).getChild(0).getChild(0).getDataClusterInfoContainer().getCategoryIdContainer().hasCategoryId());
+        Assert.assertEquals("GAME_ACTION", response.getDoc(0).getChild(0).getChild(0).getDataClusterInfoContainer().getCategoryIdContainer().getCategoryId());
         Assert.assertEquals(1, response.getDoc(0).getChild(0).getChild(0).getImageCount());
         Assert.assertEquals(5, response.getDoc(0).getChild(0).getChild(0).getImage(0).getImageType());
         Assert.assertEquals("https://lh3.ggpht.com/nBolgfacOtUEgcD-SpE-Y_knIh0lTtZZzqrMNRFkWgly2SFaTdBBJRq7e_7AwaKOrb5_IVMb2JAv-mJLbg", response.getDoc(0).getChild(0).getChild(0).getImage(0).getImageUrl());

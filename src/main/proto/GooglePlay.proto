@@ -704,12 +704,34 @@ message DocV2 {
   optional string purchaseDetailsUrl = 20;
   optional bool detailsReusable = 21;
   optional string subtitle = 22;
-  optional UnknownCategoryContainer unknownCategoryContainer = 24;
+  optional DataClusterInfoContainer dataClusterInfoContainer = 24;
   optional Unknown25 unknown25 = 25;
   optional string descriptionShort = 27;
   optional string reviewSnippetsUrl = 31;
   optional string reviewQuestionsUrl = 34;
 }
+
+message DataClusterInfoContainer {
+  optional int32 backendId = 1;
+  optional DataClusterInfo dataClusterInfo = 4;
+  optional CategoryIdContainer categoryIdContainer = 5;
+}
+
+message DataClusterInfo {
+  optional ClusterInfoItemContainer clusterInfoItemContainer = 3;
+  optional string originalQuery = 6;
+}
+
+message ClusterInfoItemContainer {
+  optional ClusterInfoItem clusterInfoItem = 2;
+}
+
+message ClusterInfoItem {
+    optional string clusterName = 1;
+    optional int32 backendId = 2;
+    optional int32 docType = 3;
+}
+
 message Unknown25 {
   repeated Unknown25Item item = 2;
 }
